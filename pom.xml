@@ -26,6 +26,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				
 				<cloudHubDeployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<muleVersion>${mule.version}</muleVersion>
@@ -39,6 +40,15 @@
                                 <objectStoreV2>true</objectStoreV2>
 				</cloudHubDeployment>
 				</configuration>
+					<executions>
+							<execution>
+								<id>deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
 			</plugin>
 		</plugins>
 	</build>
