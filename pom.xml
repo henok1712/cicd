@@ -32,7 +32,7 @@
 								<username>${username}</username>
 								<password>${password}</password>
 								<applicationName>${application.name}</applicationName>
-								<environment>${cloundhub.env}</environment>				
+								<environment>${environment}</environment>				
 								<workerType>${cloudhub.workerType}</workerType>
                                 <workers>${cloudhub.workers}</workers>
 				</cloudHubDeployment>
