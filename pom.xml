@@ -35,6 +35,8 @@
 								<environment>${environment}</environment>				
 								<workerType>${worker.Type}</workerType>
                                 <workers>${workers}</workers>
+                                <region>us-east-2</region>
+                                <objectStoreV2>true</objectStoreV2>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
