@@ -3,19 +3,22 @@ agent any
 stages {
     stage ('build Application'){
         steps {
+        
             bat 'mvn clean install'
         }
     }
     stage ('Test Application'){
         steps{
+        
             bat 'mvn clean test'
         }
     }
     stage('Deploy Application'){
-    steps {
+        steps {
     
-        bat 'mvn clean package deploy -Dmule.version=4.2.2 -Dusername=test -Dpassword=Trust124 -Denvironment=Sandbox -Dworkers=1 -Dworker.type=Micro -Dapplication.name=cicdtest'
+                   bat 'mvn clean package deploy -Dmule.version=4.2.2 -Dusername=test -Dpassword=Trust124 -Denvironment=Sandbox -Dworkers=1 -Dworker.type=Micro -Dapplication.name=cicdtest'
+           
             }
         }
      }
-}
+ }
