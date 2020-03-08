@@ -17,7 +17,9 @@
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
-
+   <profiles>
+   <profile>
+		<id>cloudhub</id>
 	<build>
 		<plugins>
 			<plugin>
@@ -36,7 +38,7 @@
 						<version>${mule.maven.plugin.version}</version>
 						<configuration>
 						
-	<cloudHubDeployment>
+	                       <cloudHubDeployment>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<muleVersion>${mule.version}</muleVersion>
 								<username>solution</username>
@@ -47,7 +49,7 @@
                                 <workers>1</workers>
                                 <region>us-east-2</region>
                                
-	</cloudHubDeployment>
+	                        </cloudHubDeployment>
 						</configuration>
 						<executions>
 							<execution>
@@ -61,6 +63,8 @@
 				</plugin>
 			</plugins>
 		</build>
+	</profile>
+	</profiles>
 
 	<dependencies>
         <dependency>
