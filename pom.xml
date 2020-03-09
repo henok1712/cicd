@@ -22,6 +22,19 @@
 		<id>cloudhub</id>
 	<build>
 		<plugins>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+				<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-install-plugin</artifactId>
+						<version>3.1.1</version>
+					</plugin>
 
 			<plugin>      
 						<groupId>org.mule.tools.maven</groupId>
@@ -31,15 +44,15 @@
 						
 	                       <cloudHubDeployment>
 								<uri>https://anypoint.mulesoft.com</uri>
-								<muleVersion>${mule.version}</muleVersion>
+								<muleVersion>4.2.2</muleVersion>
 								<username>solution</username>
 								<password>Robert123</password>
 								<applicationName>cicdtest</applicationName>
 								<environment>Sandbox</environment>				
 								<workerType>Micro</workerType>
                                 <workers>1</workers>
-                                <region>us-east-2</region>
-                               
+                                <objectStoreV2>true</objectStoreV2>
+
 	                        </cloudHubDeployment>
 						</configuration>
 						<executions>
